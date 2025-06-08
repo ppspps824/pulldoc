@@ -24,8 +24,8 @@ def make_llm_request(
                 {"role": "system", "content": prompt},
                 {"role": "user", "content": content},
             ],
-            temperature=0.1,
-            max_tokens=2000,
+            temperature=0.9,
+            num_retries=2,
         )
 
         # Get token usage
