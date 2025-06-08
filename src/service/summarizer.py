@@ -227,10 +227,15 @@ def summarize_prs(
     """Batch process all PR files in the input directory in groups of 10"""
     pr_files = sorted(Path(settings.base_dir / repo_name / "raws").glob("*.json"))
     if not pr_files:
-        logger.warning(
+        logger.info(
             f"No PR files found: {settings.base_dir / repo_name / 'raws'}"
         )
-        return
+        return {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0,
+            "total_cost": 0,
+        }
 
     processed_batches = 0
     failed_batches = 0
@@ -285,7 +290,7 @@ def create_final_summary(
         Path(settings.base_dir / repo_name / "summaries").glob("*.md")
     )
     if not summary_files:
-        logger.warning(
+        logger.info(
             f"No summary files found: {settings.base_dir / 'summaries'}"
         )
         return {

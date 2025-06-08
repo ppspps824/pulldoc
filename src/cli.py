@@ -11,6 +11,7 @@ app = typer.Typer(
 
 
 @app.command(
+    help="Collect PR data and save to file",
     context_settings={
         "allow_extra_args": True,
         "ignore_unknown_options": True,
@@ -35,6 +36,7 @@ def collect(
 
 
 @app.command(
+    help="Summarize PR data",
     context_settings={
         "allow_extra_args": True,
         "ignore_unknown_options": True,
@@ -85,6 +87,7 @@ def summarize(
 
 
 @app.command(
+    help="Execute PR data collection and summarization in one go (individual summaries + final summary)",
     context_settings={
         "allow_extra_args": True,
         "ignore_unknown_options": True,

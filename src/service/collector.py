@@ -22,11 +22,15 @@ def fetch_prs(
             raise
 
         pulls = repo.get_pulls(state="all", sort="created")
+        if not pulls.totalCount:
+            logger.info(f"No PRs found for {org_repo}")
+            return
         out_dir = settings.base_dir / org_repo / "raws"
         out_dir.mkdir(parents=True, exist_ok=True)
 
         processed_count = 0
         saved_files = []
+
 
         fixed_start = max(0, start - 1) if start else None
         for pr in pulls[fixed_start:end]:
