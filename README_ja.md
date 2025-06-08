@@ -1,5 +1,5 @@
 <div align="center">
-<img width="200" alt="pulldoc Logo" src="https://github.com/user-attachments/assets/35c9e651-ae19-4d7b-bbda-e05c232d5076">
+<img width="200" alt="pulldoc Logo" src="https://github.com/user-attachments/assets/8ee1b6e9-03c0-4448-8f4f-55295474b549">
 
 <p align="center">
   <a href="https://python.org"><img src="https://img.shields.io/badge/python-3.12+-blue.svg" alt="Python Version"></a>
@@ -13,10 +13,6 @@
   <a href="./README.md">English</a>
   <a href="./README_ja.md">日本語</a>
 </p>
-
-
-[🚀 クイックスタート](#-クイックスタート) • [📚 ドキュメント](#-使用方法) • [💡 機能](#-主な機能) • [🛠️ 開発](#-開発環境のセットアップ)
-
 
 </div>
 
@@ -61,9 +57,11 @@ GitHubのプルリクエスト履歴を解析し、修正パターンと課題�
 ## 🚀 クイックスタート
 
 ```bash
-# 環境変数を設定
-export GITHUB_TOKEN="your_github_token"
+# LLMプロバイダーのAPIキー設定
 export OPENAI_API_KEY="your_openai_api_key" or その他のLLMプロバイダー設定
+
+# Github Tokenの設定（プライベートリポジトリのみ）
+export GITHUB_TOKEN="your_github_token"
 ```
 
 Using uvx
@@ -164,9 +162,6 @@ pulldocへのコントリビューションを歓迎します！
 
 <div align="center">
 
-**⭐ このプロジェクトが役に立ったら、スターをお願いします！ ⭐**
-
-[🐛 バグ報告](https://github.com/your-username/pulldoc/issues/new?template=bug_report.md) • [💡 機能要望](https://github.com/your-username/pulldoc/issues/new?template=feature_request.md) • [❓ 質問](https://github.com/your-username/pulldoc/discussions)
-
+**⭐ このプロジェクトが役に立ったら、　[スター](https://github.com/ppspps824/pulldoc/stargazers)をお願いします！ ⭐**
 
 </div>

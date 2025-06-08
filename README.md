@@ -1,7 +1,7 @@
 <div align="center">
 
 
-<img width="200" alt="pulldoc Logo" src="https://github.com/user-attachments/assets/35c9e651-ae19-4d7b-bbda-e05c232d5076">
+<img width="200" alt="pulldoc Logo" src="https://github.com/user-attachments/assets/8ee1b6e9-03c0-4448-8f4f-55295474b549">
 
 <p align="center">
   <a href="https://python.org"><img src="https://img.shields.io/badge/python-3.12+-blue.svg" alt="Python Version"></a>
@@ -15,9 +15,6 @@
   <a href="./README.md">English</a>
   <a href="./README_ja.md">日本語</a>
 </p>
-
-
-[🚀 Quick Start](#-quick-start) • [📚 Documentation](#-usage) • [💡 Features](#-key-features) • [🛠️ Development](#-development-setup)
 
 </div>
 
@@ -60,9 +57,11 @@ It analyzes GitHub pull request history and automatically generates modification
 ## 🚀 Quick Start
 
 ```bash
-# Set environment variables
-export GITHUB_TOKEN="your_github_token"
+# Set LLM API Key
 export OPENAI_API_KEY="your_openai_api_key" or other LLM provider settings
+
+# Set Github Token (Private Only)
+export GITHUB_TOKEN="your_github_token"
 ```
 
 Using uvx
@@ -163,9 +162,7 @@ This project is released under the [MIT License](LICENSE).
 
 <div align="center">
 
-**⭐ If this project was helpful, please give it a star! ⭐**
-
-[🐛 Bug Report](https://github.com/your-username/pulldoc/issues/new?template=bug_report.md) • [💡 Feature Request](https://github.com/your-username/pulldoc/issues/new?template=feature_request.md) • [❓ Questions](https://github.com/your-username/pulldoc/discussions)
+**⭐ If this project was helpful, [please give it a star!](https://github.com/ppspps824/pulldoc/stargazers) ⭐**
 
 
 </div>
