@@ -21,10 +21,10 @@ class ProjectSettings(BaseSettings):
         validate_assignment=True
     )
 
-    github_token: str = Field(
+    github_token: str | None = Field(
+        default=None,
         env="GITHUB_TOKEN",
-        description="GitHub API token",
-        min_length=1
+        description="GitHub API token (optional)"
     )
 
     summary_system_prompt: str = Field(
