@@ -84,8 +84,6 @@ def summarize(
         raise typer.Exit(1)
 
 
-# final_summary command has been removed
-
 
 @app.command(
     context_settings={
