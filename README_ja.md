@@ -133,11 +133,10 @@ pulldocへのコントリビューションを歓迎します！
 4. ブランチにプッシュ (`git push origin feature/amazing-feature`)
 5. プルリクエストを作成
 
-詳細は[CONTRIBUTING.md](CONTRIBUTING.md)をご覧ください。
 
 ## 🐛 バグ報告・機能要望
 
-問題を発見した場合や新機能のアイデアがある場合は、[Issues](https://github.com/your-username/pulldoc/issues)でお知らせください。
+問題を発見した場合や新機能のアイデアがある場合は、[Issues](https://github.com/ppspps824/pulldoc/issues)でお知らせください。
 
 バグ報告の際は以下の情報を含めてください：
 - Python バージョン

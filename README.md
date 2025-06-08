@@ -137,7 +137,7 @@ We welcome contributions to pulldoc!
 
 ## 🐛 Bug Reports & Feature Requests
 
-If you discover issues or have ideas for new features, please let us know through [Issues](https://github.com/your-username/pulldoc/issues).
+If you discover issues or have ideas for new features, please let us know through [Issues](https://github.com/ppspps824/pulldoc/issues).
 
 When reporting bugs, please include the following information:
 - Python version
