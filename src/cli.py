@@ -30,8 +30,7 @@ def collect(
             end=end,
         )
 
-    except Exception as e:
-        typer.echo(f"Error: {e}", err=True)
+    except Exception:
         raise typer.Exit(1)
 
 
@@ -80,7 +79,7 @@ def summarize(
         return usage
 
     except Exception as e:
-        logger.error(f"Error occurred during summarization: {e}", exc_info=True)
+        logger.error(f"Error occurred during summarization: {e}")
         raise typer.Exit(1)
 
 
@@ -106,6 +105,7 @@ def run(
     try:
         # Collect PRs
         collect(
+            ctx=ctx,
             repo=repo,
             start=start,
             end=end,
@@ -113,6 +113,7 @@ def run(
 
         # Generate summaries
         usage = summarize(
+            ctx=ctx,
             repo=repo,
             model=model,
             custom_prompt=custom_prompt,
@@ -123,7 +124,6 @@ def run(
 
     except Exception as e:
         logger.error(f"Error occurred during batch execution: {e}")
-        typer.echo(f"Error: {e}", err=True)
         raise typer.Exit(1)
 
 

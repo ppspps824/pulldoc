@@ -15,7 +15,12 @@ def fetch_prs(
 ) -> None:
     try:
         gh = Github(settings.github_token)
-        repo = gh.get_repo(org_repo)
+        try:
+            repo = gh.get_repo(org_repo)
+        except Exception as e:
+            logger.error(f"Error fetching repository {org_repo}")
+            raise
+
         pulls = repo.get_pulls(state="all", sort="created")
         out_dir = settings.base_dir / org_repo / "raws"
         out_dir.mkdir(parents=True, exist_ok=True)
@@ -91,5 +96,5 @@ def fetch_prs(
         logger.info(f"Finished fetching PRs: {processed_count} PRs have been fetched and saved.")
 
     except Exception as e:
-        logger.error(f"An error occurred while fetching PRs: {e}", exc_info=True)
+        logger.error(f"An error occurred while fetching PRs: {e}")
         raise
